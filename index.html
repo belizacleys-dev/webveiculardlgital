@@ -1,15 +1,721 @@
-<div class="site-shell">
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18211f">
+  <meta name="description" content="Cotidiano em Papel — distribuidora de papelaria e suprimentos para escritórios.">
+  <meta name="robots" content="index, follow">
 
-  <div class="announcement">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cotidiano em Papel | Distribuidora">
+  <meta property="og:description" content="Conheça a empresa, a equipe e os canais oficiais da Cotidiano em Papel.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <title>Cotidiano em Papel | Distribuidora</title>
+
+  <style>
+    :root {
+      --ink: #18211f;
+      --muted: #68706d;
+      --paper: #f6f4ef;
+      --line: #dfe2dc;
+      --green: #455d45;
+      --blue: #c9d8e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    .topbar {
+      background: #e7ece3;
+      color: #526250;
+      font-size: 12px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .topbar a {
+      font-weight: 700;
+      margin-left: 18px;
+    }
+
+    .header {
+      height: 82px;
+      border-bottom: 1px solid rgba(24, 33, 31, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      background: rgba(246, 244, 239, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font: 700 12px Manrope;
+    }
+
+    .brand strong,
+    .brand small {
+      display: block;
+    }
+
+    .brand strong {
+      font: 800 17px Manrope;
+      letter-spacing: -0.05em;
+    }
+
+    .brand small {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #748078;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 13px;
+      color: #59635d;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+    }
+
+    .nav .cta {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 20px;
+      padding: 11px 16px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      padding-top: 90px;
+      padding-bottom: 105px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      color: #5d7658;
+      margin: 0 0 22px;
+    }
+
+    .eyebrow:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: #78936f;
+      vertical-align: middle;
+      margin-right: 9px;
+    }
+
+    .hero h1,
+    h2 {
+      font: 800 clamp(40px, 5vw, 70px)/1.03 Manrope;
+      letter-spacing: -0.07em;
+      margin: 0;
+    }
+
+    .hero h1 em {
+      color: #5f795b;
+      font-style: normal;
+    }
+
+    .hero p:not(.eyebrow) {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 26px 0 30px;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 0;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 4px;
+      padding: 15px 19px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #30403a;
+    }
+
+    .link-button {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .facts {
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 40px;
+      margin-top: 70px;
+      padding-top: 22px;
+    }
+
+    .facts strong,
+    .facts span {
+      display: block;
+    }
+
+    .facts strong {
+      font: 700 21px Manrope;
+    }
+
+    .facts span {
+      font-size: 10px;
+      color: #7c8580;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 4px;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 500px;
+    }
+
+    .visual img {
+      width: 80%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      filter: saturate(0.72);
+      position: relative;
+      z-index: 1;
+    }
+
+    .visual:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      height: 72%;
+      background: var(--blue);
+    }
+
+    .visual-card {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      background: #fff;
+      padding: 18px 20px;
+      box-shadow: 0 14px 30px #2230281d;
+      z-index: 2;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .visual-card b {
+      display: block;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-head {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(35px, 4vw, 52px);
+      max-width: 560px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      padding-top: 55px;
+    }
+
+    .large-copy {
+      font: 500 25px/1.45 Manrope;
+      letter-spacing: -0.04em;
+      max-width: 430px;
+      margin: 0;
+    }
+
+    .point {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding: 0 0 24px;
+      margin-bottom: 25px;
+    }
+
+    .point > span {
+      color: #77916f;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .point h3,
+    .service h3 {
+      font: 700 18px Manrope;
+      letter-spacing: -0.04em;
+      margin: 0 0 7px;
+    }
+
+    .point p,
+    .service p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .company {
+      background: var(--green);
+      color: #f3f5ee;
+      padding: 100px 0;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .company h2 {
+      font-size: clamp(35px, 4vw, 53px);
+      max-width: 570px;
+    }
+
+    .company-copy {
+      color: #d1dacf;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .facts-card {
+      background: #f4f3ed;
+      color: var(--ink);
+      padding: 28px;
+    }
+
+    .facts-card > p {
+      color: #71816b;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .fact {
+      padding: 14px 0;
+      border-bottom: 1px solid #dce0d8;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 13px;
+    }
+
+    .fact:last-child {
+      border: 0;
+    }
+
+    .fact span {
+      color: #7a827d;
+    }
+
+    .fact b {
+      text-align: right;
+      max-width: 240px;
+    }
+
+    .services-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 45px;
+    }
+
+    .services-head p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 220px;
+      line-height: 1.6;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .service {
+      background: #ebece6;
+      min-height: 280px;
+      padding: 23px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-number {
+      color: #698064;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .service h3 {
+      margin-top: 54px;
+    }
+
+    .check {
+      border-top: 1px solid #d2d8cd;
+      padding-top: 14px;
+      margin-top: auto;
+      color: #687966;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 10px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 100px;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 4vw, 54px);
+    }
+
+    .contact-copy > p:not(.eyebrow) {
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 380px;
+    }
+
+    .detail {
+      margin-top: 29px;
+    }
+
+    .detail strong,
+    .detail span {
+      display: block;
+    }
+
+    .detail strong {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .detail span,
+    .detail a {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .form {
+      background: #ebece6;
+      padding: 34px 37px;
+    }
+
+    .form h3 {
+      font: 800 28px Manrope;
+      letter-spacing: -0.06em;
+      margin: 8px 0 22px;
+    }
+
+    .form label {
+      display: block;
+      color: #657069;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 16px;
+    }
+
+    .form input,
+    .form textarea {
+      display: block;
+      width: 100%;
+      border: 1px solid #d6dbd2;
+      background: #f9f8f3;
+      padding: 13px;
+      margin-top: 8px;
+      outline: 0;
+      font-size: 13px;
+    }
+
+    .form textarea {
+      resize: vertical;
+    }
+
+    .form input:focus,
+    .form textarea:focus {
+      border-color: #6a8465;
+    }
+
+    .form .button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .form small {
+      display: block;
+      text-align: center;
+      color: #87908a;
+      font-size: 10px;
+      margin-top: 13px;
+    }
+
+    .footer {
+      background: var(--ink);
+      color: #dce3dc;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 25px;
+    }
+
+    .footer-label {
+      display: block;
+      color: #819084;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 7px;
+    }
+
+    .footer-grid strong,
+    .footer-grid a {
+      font-size: 12px;
+    }
+
+    .bottom {
+      border-top: 1px solid #35413b;
+      margin-top: 40px;
+      padding-top: 18px;
+      color: #859087;
+      font-size: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bottom button {
+      background: 0;
+      border: 0;
+      color: #ccd8cb;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 780px) {
+      .wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .header {
+        height: 72px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero,
+      .team-grid,
+      .company-grid,
+      .contact {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero {
+        padding-top: 62px;
+        padding-bottom: 72px;
+      }
+
+      .visual {
+        min-height: 360px;
+      }
+
+      .visual img {
+        height: 330px;
+      }
+
+      .section {
+        padding-top: 75px;
+        padding-bottom: 80px;
+      }
+
+      .services-head {
+        display: block;
+      }
+
+      .services-head p {
+        margin-top: 18px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid .brand {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar {
+        font-size: 10px;
+      }
+
+      .topbar a {
+        display: block;
+        margin: 5px 0 0;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .actions {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .facts {
+        gap: 17px;
+      }
+
+      .facts strong {
+        font-size: 18px;
+      }
+
+      .visual img {
+        width: 83%;
+        height: 300px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form {
+        padding: 25px 19px;
+      }
+
+      .bottom {
+        display: block;
+        line-height: 1.8;
+      }
+
+      .bottom button {
+        padding: 0;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
     Atendimento institucional da Cotidiano em Papel
-    <a href="https://wa.me/556135612449">
-      Falar com a equipe
+    <a
+      href="https://wa.me/556135612449"
+      target="_blank"
+      rel="noopener"
+    >
+      Falar com a equipe ↗
     </a>
   </div>
 
-  <header class="site-header">
+  <header class="header wrap">
     <a class="brand" href="#inicio">
-      <span class="brand-mark">CP</span>
+      <span class="mark">CP</span>
 
       <span>
         <strong>Cotidiano</strong>
@@ -17,26 +723,27 @@
       </span>
     </a>
 
-    <nav class="desktop-nav">
-      <button>Equipe</button>
-      <button>A empresa</button>
-      <button>Serviços</button>
-      <button>Contato</button>
+    <nav class="nav">
+      <a href="#equipe">Equipe</a>
+      <a href="#empresa">A empresa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
 
       <a
-        class="nav-action"
+        class="cta"
         href="https://wa.me/556135612449"
         target="_blank"
+        rel="noopener"
       >
-        WhatsApp
+        WhatsApp ↗
       </a>
     </nav>
   </header>
 
   <main>
 
-    <section id="inicio" class="hero">
-      <div class="hero-copy">
+    <section class="hero wrap" id="inicio">
+      <div>
         <p class="eyebrow">
           Distribuidora Cotidiano em Papel Ltda.
         </p>
@@ -47,22 +754,22 @@
           em cada detalhe.
         </h1>
 
-        <p class="hero-text">
+        <p>
           Conheça a empresa e as pessoas que fazem parte da nossa rotina
           de distribuição de papelaria e suprimentos para escritórios.
         </p>
 
-        <div class="hero-buttons">
-          <a class="button button-dark" href="#equipe">
-            Conheça nossa equipe
+        <div class="actions">
+          <a class="button" href="#equipe">
+            Conheça nossa equipe ↗
           </a>
 
-          <a class="text-button" href="#empresa">
-            Sobre a empresa
+          <a class="link-button" href="#empresa">
+            Sobre a empresa ↓
           </a>
         </div>
 
-        <div class="hero-facts">
+        <div class="facts">
           <div>
             <strong>2019</strong>
             <span>Ano de fundação</span>
@@ -80,21 +787,21 @@
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div class="visual">
         <img
-          src="https://images.unsplash.com/photo-1573497701175-00c200fd57f0?crop=entropy&cs=srgb&fm=jpg&q=82&w=1200"
+          src="https://images.unsplash.com/photo-1573497701175-00c200fd57f0?auto=format&fit=crop&w=1200&q=82"
           alt="Pessoas reunidas em um ambiente de trabalho"
-        />
+        >
 
         <div class="visual-card">
-          <span>Gente por trás</span>
-          <strong>do atendimento</strong>
+          Gente por trás
+          <b>do atendimento</b>
         </div>
       </div>
     </section>
 
-    <section id="equipe" class="team-section">
-      <div class="section-intro">
+    <section class="section wrap" id="equipe">
+      <div class="section-head">
         <p class="eyebrow">Nossa equipe</p>
 
         <h2>
@@ -102,15 +809,15 @@
         </h2>
       </div>
 
-      <div class="team-content">
+      <div class="team-grid">
         <p class="large-copy">
           Nossa equipe é formada por pessoas que trabalham juntas no
           atendimento, na organização e na distribuição dos produtos
           da Cotidiano em Papel.
         </p>
 
-        <div class="team-points">
-          <article class="team-point">
+        <div>
+          <div class="point">
             <span>01</span>
 
             <div>
@@ -119,9 +826,9 @@
                 Escuta e clareza para entender cada solicitação.
               </p>
             </div>
-          </article>
+          </div>
 
-          <article class="team-point">
+          <div class="point">
             <span>02</span>
 
             <div>
@@ -130,9 +837,9 @@
                 Processos internos voltados à organização dos pedidos.
               </p>
             </div>
-          </article>
+          </div>
 
-          <article class="team-point">
+          <div class="point">
             <span>03</span>
 
             <div>
@@ -141,15 +848,15 @@
                 Informações objetivas nos canais oficiais da empresa.
               </p>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="empresa" class="company-section">
-      <div class="company-grid">
+    <section class="company" id="empresa">
+      <div class="wrap company-grid">
         <div>
-          <p class="eyebrow">
+          <p class="eyebrow" style="color:#c8d8c0">
             A empresa
           </p>
 
@@ -157,7 +864,7 @@
             Informação clara para uma relação simples.
           </h2>
 
-          <p>
+          <p class="company-copy">
             A Distribuidora Cotidiano em Papel Ltda. atua com distribuição
             de artigos de papelaria e suprimentos para ambientes corporativos.
             Esta página reúne informações institucionais e canais oficiais
@@ -165,36 +872,34 @@
           </p>
         </div>
 
-        <div class="fact-card">
+        <div class="facts-card">
           <p>Dados institucionais</p>
 
-          <div class="fact-row">
+          <div class="fact">
             <span>Razão social</span>
-            <strong>
-              Distribuidora Cotidiano em Papel Ltda.
-            </strong>
+            <b>Distribuidora Cotidiano em Papel Ltda.</b>
           </div>
 
-          <div class="fact-row">
+          <div class="fact">
             <span>CNPJ</span>
-            <strong>33.552.052/0001-20</strong>
+            <b>33.552.052/0001-20</b>
           </div>
 
-          <div class="fact-row">
+          <div class="fact">
             <span>Fundação</span>
-            <strong>07/05/2019</strong>
+            <b>07/05/2019</b>
           </div>
 
-          <div class="fact-row">
+          <div class="fact">
             <span>Situação</span>
-            <strong>Ativa</strong>
+            <b>Ativa</b>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="servicos" class="services-section">
-      <div class="services-heading">
+    <section class="section wrap" id="servicos">
+      <div class="services-head">
         <div>
           <p class="eyebrow">
             O que fazemos
@@ -211,44 +916,69 @@
       </div>
 
       <div class="service-grid">
-        <article class="service-card">
-          <span>01</span>
+
+        <article class="service">
+          <span class="service-number">01</span>
+
           <h3>Distribuição de papelaria</h3>
+
           <p>
             Itens de papelaria para rotinas administrativas e ambientes
             corporativos.
           </p>
+
+          <span class="check">
+            ✓ Informação institucional
+          </span>
         </article>
 
-        <article class="service-card">
-          <span>02</span>
+        <article class="service">
+          <span class="service-number">02</span>
+
           <h3>Atendimento corporativo</h3>
+
           <p>
             Um canal institucional para empresas que precisam organizar
             suas solicitações.
           </p>
+
+          <span class="check">
+            ✓ Informação institucional
+          </span>
         </article>
 
-        <article class="service-card">
-          <span>03</span>
+        <article class="service">
+          <span class="service-number">03</span>
+
           <h3>Suprimentos para escritório</h3>
+
           <p>
             Materiais de apoio para o dia a dia de escritórios e departamentos.
           </p>
+
+          <span class="check">
+            ✓ Informação institucional
+          </span>
         </article>
 
-        <article class="service-card">
-          <span>04</span>
+        <article class="service">
+          <span class="service-number">04</span>
+
           <h3>Entrega de pedidos</h3>
+
           <p>
-            Apoio à distribuição dos pedidos realizados pelos canais
-            da empresa.
+            Apoio à distribuição dos pedidos realizados pelos canais da empresa.
           </p>
+
+          <span class="check">
+            ✓ Informação institucional
+          </span>
         </article>
+
       </div>
     </section>
 
-    <section id="contato" class="contact-section">
+    <section class="section wrap contact" id="contato">
       <div class="contact-copy">
         <p class="eyebrow">
           Canais oficiais
@@ -263,68 +993,71 @@
           oficial será aberto para que você conclua o contato.
         </p>
 
-        <div class="contact-detail">
+        <div class="detail">
           <strong>Endereço</strong>
 
           <span>
-            Av. Eng. Luiz Carlos Berrini, 1681<br />
+            Av. Eng. Luiz Carlos Berrini, 1681<br>
             São Paulo — SP
           </span>
         </div>
 
-        <div class="contact-detail">
+        <div class="detail">
           <strong>Telefone / WhatsApp</strong>
 
           <a
             href="https://wa.me/556135612449"
             target="_blank"
+            rel="noopener"
           >
             (61) 3561-2449
           </a>
         </div>
       </div>
 
-      <form class="contact-form">
-        <h3>Deixe sua mensagem</h3>
+      <form class="form" id="contact-form">
+        <p class="eyebrow">
+          Contato
+        </p>
 
-        <label for="nome">
+        <h3>
+          Deixe sua mensagem
+        </h3>
+
+        <label>
           Nome
+
           <input
             id="nome"
-            name="nome"
-            type="text"
             required
             placeholder="Como podemos chamar você?"
-          />
+          >
         </label>
 
-        <label for="email">
+        <label>
           E-mail
+
           <input
             id="email"
-            name="email"
             type="email"
             required
             placeholder="voce@empresa.com"
-          />
+          >
         </label>
 
-        <label for="mensagem">
+        <label>
           Mensagem
+
           <textarea
             id="mensagem"
-            name="mensagem"
             rows="4"
             required
             placeholder="Escreva brevemente como podemos ajudar"
           ></textarea>
         </label>
 
-        <button
-          class="button button-dark"
-          type="submit"
-        >
-          Preparar mensagem
+        <button class="button" type="submit">
+          Preparar mensagem ↗
         </button>
 
         <small>
@@ -337,31 +1070,78 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand">
-      <span class="brand-mark">CP</span>
+    <div class="wrap footer-grid">
+
+      <div class="brand">
+        <span
+          class="mark"
+          style="background:#d5e1cf;color:#18211f"
+        >
+          CP
+        </span>
+
+        <span>
+          <strong>Cotidiano em papel</strong>
+          <small>Distribuidora Cotidiano em Papel Ltda.</small>
+        </span>
+      </div>
 
       <div>
-        <strong>Cotidiano em papel</strong>
-        <span>Distribuidora Cotidiano em Papel Ltda.</span>
+        <span class="footer-label">CNPJ</span>
+        <strong>33.552.052/0001-20</strong>
+      </div>
+
+      <div>
+        <span class="footer-label">Localização</span>
+        <strong>São Paulo — SP</strong>
+      </div>
+
+      <div>
+        <span class="footer-label">Contato</span>
+
+        <a href="https://wa.me/556135612449">
+          (61) 3561-2449
+        </a>
       </div>
     </div>
 
-    <div>
-      <span>CNPJ</span>
-      <strong>33.552.052/0001-20</strong>
-    </div>
+    <div class="wrap bottom">
+      <span>
+        © 2026 Cotidiano em Papel. Todos os direitos reservados.
+      </span>
 
-    <div>
-      <span>Localização</span>
-      <strong>São Paulo — SP</strong>
-    </div>
-
-    <div>
-      <span>Contato</span>
-      <a href="https://wa.me/556135612449">
-        (61) 3561-2449
-      </a>
+      <button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Voltar ao topo ↑
+      </button>
     </div>
   </footer>
 
-</div>
+  <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        const texto =
+          "Olá, meu nome é " +
+          nome +
+          ". E-mail: " +
+          email +
+          ". Mensagem: " +
+          mensagem;
+
+        window.open(
+          "https://wa.me/556135612449?text=" +
+          encodeURIComponent(texto),
+          "_blank",
+          "noopener"
+        );
+      });
+  </script>
+
+</body>
+</html>
