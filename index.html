@@ -1,153 +1,367 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotidiano em Papel</title>
+<div class="site-shell">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
-    }
+  <div class="announcement">
+    Atendimento institucional da Cotidiano em Papel
+    <a href="https://wa.me/556135612449">
+      Falar com a equipe
+    </a>
+  </div>
 
-    header {
-      padding: 30px;
-      text-align: center;
-      background: #020617;
-    }
+  <header class="site-header">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">CP</span>
 
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+      <span>
+        <strong>Cotidiano</strong>
+        <small>em papel</small>
+      </span>
+    </a>
 
-    .services {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding: 20px;
-      background: #020617;
-    }
+    <nav class="desktop-nav">
+      <button>Equipe</button>
+      <button>A empresa</button>
+      <button>Serviços</button>
+      <button>Contato</button>
 
-    .service-box {
-      background: #1e293b;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+      <a
+        class="nav-action"
+        href="https://wa.me/556135612449"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
+    </nav>
+  </header>
 
-    .container {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
+  <main>
 
-    .card {
-      background: #020617;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          Distribuidora Cotidiano em Papel Ltda.
+        </p>
 
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
+        <h1>
+          Uma equipe que coloca
+          <em>cuidado</em>
+          em cada detalhe.
+        </h1>
 
-    .cta button {
-      background: #22c55e;
-      color: black;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-    }
+        <p class="hero-text">
+          Conheça a empresa e as pessoas que fazem parte da nossa rotina
+          de distribuição de papelaria e suprimentos para escritórios.
+        </p>
 
-    .cta button:hover {
-      background: #16a34a;
-    }
+        <div class="hero-buttons">
+          <a class="button button-dark" href="#equipe">
+            Conheça nossa equipe
+          </a>
 
-    /* Botão WhatsApp */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-size: 16px;
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    }
+          <a class="text-button" href="#empresa">
+            Sobre a empresa
+          </a>
+        </div>
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
-</head>
+        <div class="hero-facts">
+          <div>
+            <strong>2019</strong>
+            <span>Ano de fundação</span>
+          </div>
 
-<body>
+          <div>
+            <strong>SP</strong>
+            <span>Sede em São Paulo</span>
+          </div>
 
-<header>
-  <h1>Cotidiano em Papel</h1>
-  <p>Soluções em Papelaria com Excelência</p>
-</header>
+          <div>
+            <strong>Ativa</strong>
+            <span>Situação cadastral</span>
+          </div>
+        </div>
+      </div>
 
-<!-- SERVIÇOS NO TOPO -->
-<div class="services">
-  <div class="service-box">📦 Distribuição de Papelaria</div>
-  <div class="service-box">🏢 Atendimento Corporativo</div>
-  <div class="service-box">🖨️ Suprimentos para Escritório</div>
-  <div class="service-box">🚚 Entrega Rápida</div>
+      <div class="hero-visual">
+        <img
+          src="https://images.unsplash.com/photo-1573497701175-00c200fd57f0?crop=entropy&cs=srgb&fm=jpg&q=82&w=1200"
+          alt="Pessoas reunidas em um ambiente de trabalho"
+        />
+
+        <div class="visual-card">
+          <span>Gente por trás</span>
+          <strong>do atendimento</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="team-section">
+      <div class="section-intro">
+        <p class="eyebrow">Nossa equipe</p>
+
+        <h2>
+          Profissionais presentes em cada etapa.
+        </h2>
+      </div>
+
+      <div class="team-content">
+        <p class="large-copy">
+          Nossa equipe é formada por pessoas que trabalham juntas no
+          atendimento, na organização e na distribuição dos produtos
+          da Cotidiano em Papel.
+        </p>
+
+        <div class="team-points">
+          <article class="team-point">
+            <span>01</span>
+
+            <div>
+              <h3>Atendimento próximo</h3>
+              <p>
+                Escuta e clareza para entender cada solicitação.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-point">
+            <span>02</span>
+
+            <div>
+              <h3>Rotina organizada</h3>
+              <p>
+                Processos internos voltados à organização dos pedidos.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-point">
+            <span>03</span>
+
+            <div>
+              <h3>Relações transparentes</h3>
+              <p>
+                Informações objetivas nos canais oficiais da empresa.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="empresa" class="company-section">
+      <div class="company-grid">
+        <div>
+          <p class="eyebrow">
+            A empresa
+          </p>
+
+          <h2>
+            Informação clara para uma relação simples.
+          </h2>
+
+          <p>
+            A Distribuidora Cotidiano em Papel Ltda. atua com distribuição
+            de artigos de papelaria e suprimentos para ambientes corporativos.
+            Esta página reúne informações institucionais e canais oficiais
+            de contato.
+          </p>
+        </div>
+
+        <div class="fact-card">
+          <p>Dados institucionais</p>
+
+          <div class="fact-row">
+            <span>Razão social</span>
+            <strong>
+              Distribuidora Cotidiano em Papel Ltda.
+            </strong>
+          </div>
+
+          <div class="fact-row">
+            <span>CNPJ</span>
+            <strong>33.552.052/0001-20</strong>
+          </div>
+
+          <div class="fact-row">
+            <span>Fundação</span>
+            <strong>07/05/2019</strong>
+          </div>
+
+          <div class="fact-row">
+            <span>Situação</span>
+            <strong>Ativa</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="services-section">
+      <div class="services-heading">
+        <div>
+          <p class="eyebrow">
+            O que fazemos
+          </p>
+
+          <h2>
+            Serviços para o cotidiano do escritório.
+          </h2>
+        </div>
+
+        <p>
+          Conheça as frentes de atuação apresentadas pela empresa.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span>01</span>
+          <h3>Distribuição de papelaria</h3>
+          <p>
+            Itens de papelaria para rotinas administrativas e ambientes
+            corporativos.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <span>02</span>
+          <h3>Atendimento corporativo</h3>
+          <p>
+            Um canal institucional para empresas que precisam organizar
+            suas solicitações.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <span>03</span>
+          <h3>Suprimentos para escritório</h3>
+          <p>
+            Materiais de apoio para o dia a dia de escritórios e departamentos.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <span>04</span>
+          <h3>Entrega de pedidos</h3>
+          <p>
+            Apoio à distribuição dos pedidos realizados pelos canais
+            da empresa.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div class="contact-copy">
+        <p class="eyebrow">
+          Canais oficiais
+        </p>
+
+        <h2>
+          Vamos conversar?
+        </h2>
+
+        <p>
+          Envie uma mensagem com sua dúvida. Ao finalizar, o WhatsApp
+          oficial será aberto para que você conclua o contato.
+        </p>
+
+        <div class="contact-detail">
+          <strong>Endereço</strong>
+
+          <span>
+            Av. Eng. Luiz Carlos Berrini, 1681<br />
+            São Paulo — SP
+          </span>
+        </div>
+
+        <div class="contact-detail">
+          <strong>Telefone / WhatsApp</strong>
+
+          <a
+            href="https://wa.me/556135612449"
+            target="_blank"
+          >
+            (61) 3561-2449
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <h3>Deixe sua mensagem</h3>
+
+        <label for="nome">
+          Nome
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            required
+            placeholder="Como podemos chamar você?"
+          />
+        </label>
+
+        <label for="email">
+          E-mail
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="voce@empresa.com"
+          />
+        </label>
+
+        <label for="mensagem">
+          Mensagem
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="4"
+            required
+            placeholder="Escreva brevemente como podemos ajudar"
+          ></textarea>
+        </label>
+
+        <button
+          class="button button-dark"
+          type="submit"
+        >
+          Preparar mensagem
+        </button>
+
+        <small>
+          Seus dados serão usados apenas para responder ao contato iniciado
+          por você.
+        </small>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-mark">CP</span>
+
+      <div>
+        <strong>Cotidiano em papel</strong>
+        <span>Distribuidora Cotidiano em Papel Ltda.</span>
+      </div>
+    </div>
+
+    <div>
+      <span>CNPJ</span>
+      <strong>33.552.052/0001-20</strong>
+    </div>
+
+    <div>
+      <span>Localização</span>
+      <strong>São Paulo — SP</strong>
+    </div>
+
+    <div>
+      <span>Contato</span>
+      <a href="https://wa.me/556135612449">
+        (61) 3561-2449
+      </a>
+    </div>
+  </footer>
+
 </div>
-
-<div class="container">
-
-  <div class="card">
-    <h2>Sobre a Empresa</h2>
-    <p>A Distribuidora Cotidiano em Papel LTDA oferece soluções completas em papelaria para empresas, com qualidade, agilidade e confiança.</p>
-  </div>
-
-  <div class="card">
-    <h2>Informações Corporativas</h2>
-    <p><strong>CNPJ:</strong> 33.552.052/0001-20</p>
-    <p><strong>Razão Social:</strong> Distribuidora Cotidiano em Papel LTDA</p>
-    <p><strong>Fundação:</strong> 07/05/2019</p>
-    <p><strong>Situação:</strong> Ativa</p>
-  </div>
-
-  <div class="card">
-    <h2>Localização</h2>
-    <p>Avenida Eng. Luiz Carlos Berrini, 1681</p>
-    <p>São Paulo - SP</p>
-  </div>
-
-  <div class="cta">
-    <button onclick="window.location.href='https://wa.me/556135612449'">
-      Falar no WhatsApp Agora
-    </button>
-  </div>
-
-</div>
-
-<!-- BOTÃO FLUTUANTE WHATS -->
-<a class="whatsapp" href="https://wa.me/556135612449" target="_blank">
-  💬 WhatsApp
-</a>
-
-<footer>
-  © 2026 Cotidiano em Papel - Todos os direitos reservados
-</footer>
-
-</body>
-</html>
